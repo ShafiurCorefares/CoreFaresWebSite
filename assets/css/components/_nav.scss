@@ -1,0 +1,28 @@
+.nav-pills {
+  .nav-link {
+    background: white;
+    border: 0;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #67707b;
+    width: 135.76px;
+    height: 34px;
+    &.mini {
+      border-radius: 50px 0 0 50px;
+    }
+    &.detail {
+      border-radius: 0 50px 50px 0;
+      
+    }
+    &.active {
+      background: #123d6c;
+      color: white !important;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+.Itinerary-container {
+
+    &.status_page {
+        padding: 0px 32.5px 0px !important;
+
+        @media screen and (max-width:900px)
+        {
+            padding: 0px 20px 0px !important;
+        }
+    }
+
+
+    .ic_topbar {
+        // border: 1px solid red;
+        display: flex;
+        // justify-content: space-between  ;
+        // align-items: center;
+        width: 100%;
+        height: 119px;
+
+        li {
+            // border: 1px solid red;
+            width: 25%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 32px 0px;
+
+            &.drop_box {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 22px 0px 22px 22px;
+
+                .db_left {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    flex-direction: column;
+                }
+
+
+            }
+
+            .text_16_ebold {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: -0.003em;
+                color: #2A2D31;
+                margin-bottom: 8px;
+            }
+
+            .sub_text_16 {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: #515050;
+            }
+        }
+
+    }
+}
+
+.caret_switch_v1 {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caret_switch_v2 {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.passenger_details {
+
+    &.pds_quote {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 32px;
+        background: #FFFFFF;
+        border-radius: 7px;
+        margin-top: 26px;
+    }
+
+
+    .pdb_topbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left_btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+
+            .pd_text {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: -0.003em;
+                color: #121213;
+            }
+
+            .edit_details {
+                width: 116px;
+                height: 32px;
+                background: #F1F5F9;
+                border-radius: 40px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: -0.003em;
+                color: #000000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+        .right_btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+
+            .add_passenger_btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: -0.003em;
+                color: #515050;
+                width: 139px;
+                height: 32px;
+                background: #F1F5F9;
+                border-radius: 40px;
+                border: none;
+                outline: none;
+
+            }
+        }
+
+    }
+}

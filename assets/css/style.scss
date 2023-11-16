@@ -1,0 +1,52 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Work+Sans:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+// inlcudes
+@import "./includes/variables";
+@import "./includes/fonts";
+@import "./includes/mixins";
+
+// common
+@import "./common/global";
+@import "./common/header";
+@import "./common/footer";
+
+
+// components
+@import "./components/form";
+@import "./components/buttons";
+@import "./components/login";
+@import "./components/testimonials";
+@import "./components/ratings";
+@import "./pages/search";
+@import "./pages/search-results";
+@import "./components/dropdown";
+@import "./components/nav";
+@import "./pages/transitions";
+@import "./pages/booking-flow";
+@import "./pages/booking-pub";
+@import "./pages/status-quote";
+@import "./pages/status-booked";
+@import "./pages/queue";
+@import "./pages/transitions";
+@import "./pages/transactions";
+@import "./pages/privacy";
+
+
+// landing
+@import "./common/landing_header";
+@import "./common/landing_footer";
+@import "./landing/banner";
+@import "./landing/why_choose_us";
+@import "./landing/cf_story";
+@import "./landing/travel_solutions";
+@import "./landing/products";
+@import "./landing/network";
+@import "./landing/travel_insights";
+@import "./landing/frequent_flyers";
+@import "./landing/logos_marquee";
+@import "./landing/contact";
+@import "./landing/faqs";
+@import "./landing/career";

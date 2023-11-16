@@ -1,0 +1,110 @@
+.footer {
+    background-color: #FFFFFF;
+    width: 100%;
+    min-height: 300px;
+    padding: 60px 84px 60px 91px;
+
+    @media (max-width:768px) {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        @media (max-width:768px) {
+            padding-bottom: 30px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.003em;
+            color: #000000;
+            gap: 80px;
+
+            @media (max-width:768px) {
+                gap: 40px;
+            }
+
+            li {
+                max-width: 210px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .socialbox {
+                    display: flex;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 5px;
+
+                    .wrapper {
+                        height: 26px;
+                        width: 26px;
+                        background: #F1F5F9;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                p {
+                    font-weight: 500;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+
+        &_wrapper {
+            height: 55px;
+            width: 71px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:768px) {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &_bottom {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.003em;
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+
+        @media (max-width:768px) {
+            padding-top: 30px;
+        }
+
+        &_rightbox {
+            display: flex;
+            gap: 57px;
+
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+    }
+}

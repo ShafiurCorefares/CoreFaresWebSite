@@ -1,0 +1,113 @@
+.fq_flyer {
+    padding-bottom: 112px;
+
+    @media screen and (max-width:768px) {
+        padding-bottom: 50px;
+    }
+
+    &--title {
+        text-align: center;
+        line-height: 74px;
+        max-width: 762px;
+        margin: 0 auto;
+
+        @media screen and (max-width:768px) {
+            font-size: 28px;
+            line-height: 38px;
+            padding: 0 20px;
+        }
+    }
+
+    &_cards {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: auto;
+        gap: 32px;
+        padding: 30px 96px;
+        margin-top: 50px;
+
+        @media screen and (max-width:768px) {
+            padding: 10px 16px;
+            gap: 16px;
+        }
+
+        &::-webkit-scrollbar {
+            height: 0px;
+            width: 0px;
+        }
+
+
+        &_card {
+            padding: 82px 52px 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            min-width: 608px;
+            height: 453px;
+            border-radius: 50px;
+            background: #F8F8F8;
+
+            @media screen and (max-width:768px) {
+                padding: 20px;
+                min-width: 80vw;
+                height: 281px;
+                border-radius: 20px;
+            }
+
+            &--desc {
+                color: #0092D2;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+                max-width: 348px;
+
+                @media screen and (max-width:768px) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+
+            &_data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 32px;
+
+                &--profile {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                &_details {
+
+                    &--name {
+                        color: #123D6C;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px;
+                    }
+
+                    &--job {
+                        color: #9B9B9C;
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

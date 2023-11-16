@@ -1,0 +1,172 @@
+.cf_form {
+    max-width: 400px;
+
+    .input-group {
+        position: relative;
+        height: 48px;
+        border-radius: 8px;
+        border: 1px solid #D2DCE9;
+        margin-bottom: 26px;
+
+        .error {
+            position: absolute;
+            font-size: 10px;
+            line-height: 10px;
+            color: #DD1F03;
+            bottom: -16px;
+            left: 0;
+            margin-left: 0px !important;
+            background: url('/assets/images/icons/exclamation-mark-circle.svg') center left no-repeat;
+            background-size: 10px;
+            padding-left: 14px;
+        }
+
+        input {
+            border: none;
+            border-radius: 8px !important;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: $light_black_color;
+            padding-left: 0px;
+            height: 46px;
+            position: relative;
+            z-index: 1;
+            padding-left: 44px;
+
+            &.error {
+                position: relative;
+                bottom: 0px;
+                font-size: 14px;
+                line-height: 19px;
+                background: transparent;
+                padding-left: 44px;
+            }
+
+            &::placeholder {
+                opacity: 0;
+            }
+
+            &:focus {
+                box-shadow: none;
+                background: transparent;
+
+                &~.input-border {
+                    opacity: 1;
+                }
+
+                &~.input-label {
+                    top: -10px;
+                    font-size: 12px;
+                }
+            }
+
+            &:not(:placeholder-shown) {
+                &~.input-border {
+                    opacity: 1;
+                }
+
+                &~.input-label {
+                    top: -10px;
+                    font-size: 12px;
+                }
+            }
+
+            &.error~.input-border {
+                border: 1px solid $secodary_color;
+                opacity: 1;
+            }
+
+            &.error~.input-group-text svg path,
+            &.error~.input-group-text svg rect,
+            &.error~.input-group-text svg circle {
+                stroke: $secodary_color;
+            }
+        }
+
+        .input-border {
+            border: $primary_color 1px solid;
+            position: absolute;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            left: 0;
+            top: -1px;
+            border-radius: 8px !important;
+            opacity: 0;
+            @include transitionCube();
+        }
+
+        .input-group-text {
+            background: transparent;
+            border: none;
+            padding: 12px;
+            min-width: 44px;
+            height: 48px;
+            display: inline-flex;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            z-index: 2;
+        }
+
+
+
+        .input-label {
+            position: absolute;
+            top: 14px;
+            left: 36px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            background: #fff;
+            padding: 0 8px;
+            color: $grey_color;
+            z-index: 2;
+            pointer-events: none;
+            @include transitionCube();
+        }
+
+        .input-eye {
+            position: absolute;
+            right: 0px;
+            top: 0;
+            height: 48px;
+            width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9;
+            cursor: pointer;
+
+            svg path {
+                fill: #C4C4C4;
+                @include transitionCube();
+            }
+
+            svg circle {
+                stroke: #C4C4C4;
+                @include transitionCube();
+            }
+
+            &.active {
+                svg path {
+                    fill: $primary_color;
+                }
+
+                svg circle {
+                    stroke: $primary_color;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: calc(100% - 20px);
+                top: 10px;
+                left: 0;
+                background: #D2DCE9;
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.logos {
+    padding: 0 96px 117px;
+
+    @media (max-width:768px) {
+        padding: 0 20px 50px;
+    }
+
+    &--title {
+        text-align: center;
+        line-height: 74px;
+        max-width: 762px;
+        margin: 0 auto;
+
+        @media screen and (max-width:768px) {
+            font-size: 28px;
+            line-height: 38px;
+            padding: 0 20px;
+        }
+    }
+
+    &_wrapper {
+
+        margin-top: 60px;
+
+        @media (max-width:768px) {
+            margin-top: 30px;
+        }
+
+        &_container {
+            margin: 0 auto;
+
+            &_carousel {
+                padding: 60px 0;
+
+                @media (max-width:768px) {
+                    padding: 30px 0;
+                }
+
+                &_each {
+
+                    img {
+                        max-width: 100%;
+                        width: auto !important;
+                        display: block;
+                        margin: 0 auto;
+                        max-height: 50px;
+
+                        @media (max-width:768px) {
+                            max-height: 30px;
+                        }
+                    }
+                }
+
+                .owl-stage {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+    }
+}

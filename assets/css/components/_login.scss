@@ -1,0 +1,277 @@
+.cf_forgot_pwd {
+    display: flex;
+    justify-content: flex-end;
+
+    &--link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $grey_color;
+        cursor: pointer;
+        text-align: right;
+        margin-bottom: 30px;
+        @include transitionCube();
+
+        &:hover {
+            color: $primary_color;
+        }
+    }
+}
+
+.cf_sign_up_text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 20px;
+    color: $grey_color;
+
+    span {
+        color: $primary_color;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.cf_login_block {
+    display: none;
+
+    &.active {
+        display: block;
+        @include keyframeFadeIn();
+    }
+}
+
+.cf_forgot_link_success {
+    text-align: center;
+    padding: 40px 0 20px;
+    opacity: 0;
+    pointer-events: none;
+    @include transitionCube();
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &--icon {
+        margin-bottom: 10px;
+    }
+
+    &--text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $primary_color;
+    }
+}
+
+.cf_sign_up_success {
+    text-align: center;
+
+    &--icon {
+        margin-bottom: 18px;
+    }
+
+    &--title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        text-align: center;
+        color: $black_color;
+        margin-bottom: 26px;
+    }
+
+    &--text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $grey_color;
+    }
+}
+
+.cf_login {
+
+    &_wrap {
+        display: flex;
+        flex-direction: row-reverse;
+
+        @media (max-width:900px) {
+            display: block;
+        }
+    }
+
+    &_content {
+        background: #123D6C;
+        height: 100vh;
+        min-width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width:900px) {
+            min-width: 100%;
+            height: auto;
+        }
+
+        .testimonials {
+            padding: 50px 0;
+
+            @media (max-width:900px) {
+                padding: 80px 30px;
+            }
+        }
+
+        &_animate {
+            position: relative;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            @media (max-width:900px) {
+                display: none;
+            }
+
+
+            @keyframes planeMove {
+                0% {
+                    transform: translate(0, 0);
+                }
+
+                50% {
+                    transform: translate(10px, 10px);
+                }
+
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
+
+            @keyframes cloudMove {
+                0% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: -10000px 0;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 3600px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: url('/assets/images/clouds/clouds_bg.png') repeat-x;
+                background-position: 0 0;
+                background-size: auto 100%;
+                animation: cloudMove 150s linear infinite;
+            }
+
+            .plane {
+                animation: planeMove 4.5s linear infinite;
+            }
+
+        }
+    }
+
+    &_form {
+        min-width: 45%;
+
+        @media (max-width:900px) {
+            min-width: 100%;
+        }
+
+        &_inner {
+            max-width: 500px;
+            margin: 0 auto;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px 30px;
+
+            @media (max-width:900px) {
+                height: auto;
+            }
+        }
+
+        &--header {
+            text-align: center;
+            margin-bottom: 20px;
+
+            img {
+                max-height: 100px;
+            }
+        }
+
+        &_footer {
+            margin-top: 30px;
+
+            &--links {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    margin-bottom: 0px;
+                    padding-left: 0px;
+
+                    li {
+                        color: $light_grey_color;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 16px;
+
+                        a {
+                            color: $light_grey_color;
+                            text-decoration: none;
+                            @include transitionCube();
+
+                            &:hover {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &_content {
+            &--title {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+                color: $black_color;
+                margin: 12px 0;
+            }
+
+            &--text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+                color: $grey_color;
+                max-width: 360px;
+                margin: 0 auto;
+            }
+
+            .cf_form {
+                margin: auto;
+                margin-top: 42px;
+            }
+
+            .cf_forgot_pwd {
+                margin-top: -10px;
+            }
+        }
+    }
+}

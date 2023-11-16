@@ -1,0 +1,126 @@
+.banner {
+    background: linear-gradient(0deg, #BFE4F4 0%, #DEDEDE 57.29%);
+    position: relative;
+    z-index: 1;
+
+
+    &_wrapper {
+
+        position: relative;
+        z-index: 1;
+
+
+
+        &--img {
+            border-radius: 0 0 50% 50%;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                width: 100%;
+                display: block;
+
+                @media (max-width:768px) {
+                    height: 50vh;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &_info {
+            position: absolute;
+            z-index: 2;
+            top: 62%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media screen and (max-width:768px) {
+                width: 100%;
+            }
+
+
+            &--title {
+                color: #FFF;
+                text-align: center;
+                line-height: 74px;
+
+                @media screen and (max-width:768px) {
+                    font-size: 28px;
+                    line-height: 38px;
+                    padding: 0 20px;
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+
+    &_scroll {
+        width: 100%;
+        margin: 0 auto;
+        padding: 16px;
+
+        &--img {
+            height: 40px;
+            width: 40px;
+            margin: 5px auto 0;
+
+            @media screen and (max-width:768px) {
+                height: 28px;
+                width: 28px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &--msg {
+            color: #123D6C;
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            margin-top: 8px;
+
+            @media screen and (max-width:768px) {
+                font-size: 10;
+                font-weight: 600;
+                line-height: 14px;
+            }
+        }
+
+
+    }
+
+
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}

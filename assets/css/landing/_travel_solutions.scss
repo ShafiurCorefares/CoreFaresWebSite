@@ -1,0 +1,148 @@
+.travel {
+    background-color: #fff;
+    padding: 150px 96px;
+
+    @media screen and (max-width:768px) {
+        padding: 50px 0px;
+    }
+
+    &--title {
+        text-align: center;
+        line-height: 74px;
+        max-width: 831px;
+        margin: 0 auto;
+
+        @media screen and (max-width:768px) {
+            font-size: 28px;
+            line-height: 38px;
+            max-width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    &_cards {
+        margin-top: 126px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media screen and (max-width:768px) {
+            overflow-x: scroll;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            flex-direction: column;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &_card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &:hover {
+                .travel_cards_card_data_info {
+                    transform: translateY(0);
+                }
+            }
+
+            &--img {
+                height: 576px;
+                width: 446.694px;
+                border-radius: 150px;
+
+                @media screen and (max-width:768px) {
+                    height: 420px;
+                    width: auto;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+
+                    // @media screen and (max-width:768px) {
+                    //     object-fit: contain;
+                    // }
+
+
+                }
+
+            }
+
+            &_data {
+                position: absolute;
+                top: 0;
+                z-index: 2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+                padding: 70px 76px;
+                overflow: hidden;
+
+                @media screen and (max-width:768px) {
+                    padding: 40px;
+                }
+
+                &_info {
+                    text-align: center;
+                    transform: translateY(130px);
+                    transition: 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                    @media screen and (max-width:768px) {
+                        transform: translateY(0px);
+                    }
+                }
+
+                &--subtitle {
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 42px;
+
+                    @media screen and (max-width:768px) {
+                        font-size: 24px;
+                        line-height: 38px;
+                    }
+                }
+
+                &--desc {
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 34px;
+
+
+                    @media screen and (max-width:768px) {
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                margin: 380px -30px 0;
+
+                @media screen and (max-width:768px) {
+                    margin: 30px -10px 0;
+                }
+            }
+        }
+
+
+    }
+
+
+
+}
